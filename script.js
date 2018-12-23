@@ -104,29 +104,29 @@ var question2 = new trivia_object(
 );
 
 var question3 = new trivia_object(
-	"tbc?",
-	"tbc",
-	"tbc",
-	"TBC",
-	"tbc",
+	"What is the Konami Code?",
+	"Up, Down, Up, Down, Left, Left, Right, Right, A, B, START",
+	"A113",
+	"Up, Up, Down, Down, Left, Right, Left, Right, B, A, START",
+	"188848258832",
 	2
 );
 
 var question4 = new trivia_object(
-	"tbc?",
-	"tbc",
-	"tbc",
-	"TBC",
-	"tbc",
+	"When was DOOM released?",
+	"1992",
+	"1990",
+	"1993",
+	"1989",
 	2
 );
 
 var question5 = new trivia_object(
-	"tbc?",
-	"tbc",
-	"TBC",
-	"tbc",
-	"tbc",
+	"What's the best selling video game of all time?",
+	"Minecraft",
+	"Tetris",
+	"Mario",
+	"Pacman",
 	1
 );
 
@@ -147,9 +147,12 @@ function startGame() {
 	trivia_array.push(question3);
 	trivia_array.push(question4);
 	trivia_array.push(question5);*/
+	score = 0;
+	current_question = 0;
 	var display = $("#child-display");
 	display.empty();
 	var arr = [$("<div id='timer'>"), $("<div id='question'>"), $("<div id='choices'>")];
+	arr.text("00:10");
 	for(i=0; i<arr.length; i++){
 		var row = $("<div class='row text-center'>");
 		arr[i].attr("class", "col-md-12 text-center");
