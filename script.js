@@ -47,7 +47,7 @@ function resetClock() {
 	clockRunning = false;
 	clearInterval(intervalId);
 	counter = 10;
-	startClock(false);
+	//tartClock(false);
 }
 
 function timeConverter(x) {
@@ -152,7 +152,7 @@ function startGame() {
 	var display = $("#child-display");
 	display.empty();
 	var arr = [$("<div id='timer'>"), $("<div id='question'>"), $("<div id='choices'>")];
-	arr.text("00:10");
+
 	for(i=0; i<arr.length; i++){
 		var row = $("<div class='row text-center'>");
 		arr[i].attr("class", "col-md-12 text-center");
